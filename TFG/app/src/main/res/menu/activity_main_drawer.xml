@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/fototuya"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Foto del dia" />
+        <item
+            android:id="@+id/progresofisico"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Progreso fisico" />
+
+        <!-- Elemento NUTRICIÓN DEPORTIVA -->
+        <item
+            android:id="@+id/nutricion_deportiva"
+            android:title="NUTRICIÓN DEPORTIVA" />
+
+        <!-- Elemento SALUD Y BIENESTAR -->
+        <item
+            android:id="@+id/salud_y_bienestar"
+            android:title="SALUD Y BIENESTAR" />
+
+        <item
+            android:id="@+id/alimentacion"
+            android:title="ALIMENTACIÓN">
+        </item>
+
+        <item
+            android:id="@+id/accesorios"
+            android:title="ACCESORIOS">
+        </item>
+
+
+        <!-- Elemento INGREDIENTES -->
+        <item
+            android:id="@+id/ingredientes"
+            android:title="INGREDIENTES" />
+
+        <!-- Elemento NOVEDADES -->
+        <item
+            android:id="@+id/novedades"
+            android:title="NOVEDADES" />
+    </group>
+</menu>

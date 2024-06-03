@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UltimaActividad">
+
+    <!-- Imagen de fondo -->
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/parecidasparaeditar10"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="100dp"
+        android:padding="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_scrollview_background">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/constraintLayoutnifnombre"
+            android:background="@android:color/transparent"
+            android:elevation="4dp"
+            android:padding="16dp">
+
+
+
+            <!-- Campos de entrada para IMC -->
+            <EditText
+                android:id="@+id/editTextPeso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Peso (kg)"
+                android:inputType="numberDecimal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextAltura"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Altura (m)"
+                android:inputType="numberDecimal"
+                app:layout_constraintTop_toBottomOf="@+id/editTextPeso"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Botón para calcular IMC -->
+            <Button
+                android:id="@+id/buttonCalcularIMC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Calcular IMC"
+                app:layout_constraintTop_toBottomOf="@+id/editTextAltura"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- TextView para mostrar resultado de IMC -->
+            <TextView
+                android:id="@+id/textViewResultadoIMC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/buttonCalcularIMC"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Campos de entrada para TMB -->
+            <EditText
+                android:id="@+id/editTextEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Edad (años)"
+                android:inputType="number"
+                app:layout_constraintTop_toBottomOf="@+id/textViewResultadoIMC"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupSexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/editTextEdad"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <RadioButton
+                    android:id="@+id/radioHombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hombre" />
+
+                <RadioButton
+                    android:id="@+id/radioMujer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mujer" />
+            </RadioGroup>
+
+            <!-- Botón para calcular TMB -->
+            <Button
+                android:id="@+id/buttonCalcularTMB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Calcular TMB"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupSexo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- TextView para mostrar resultado de TMB -->
+            <TextView
+                android:id="@+id/textViewResultadoTMB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/buttonCalcularTMB"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+            <Spinner
+                android:id="@+id/spinnerActividadFisica"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:entries="@array/actividad_fisica"
+                app:layout_constraintTop_toBottomOf="@+id/textViewResultadoTMB"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Botón para calcular requerimiento calórico diario -->
+            <Button
+                android:id="@+id/buttonCalcularRequerimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Calcular requerimiento calórico"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerActividadFisica"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- TextView para mostrar resultado de requerimiento calórico -->
+            <TextView
+                android:id="@+id/textViewResultadoRequerimiento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/buttonCalcularRequerimiento"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <!-- Animación Lottie -->
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/lottieAnimationView10"
+                android:layout_width="253dp"
+                android:layout_height="207dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="2200dp"
+                app:layout_constraintBottom_toTopOf="@+id/editTextPeso"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.328"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.653"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/animation9" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

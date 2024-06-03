@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    tools:context=".Dieta.InformacionProducto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Imagen del producto -->
+            <ImageView
+                android:id="@+id/productImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:contentDescription="@string/product_image_description"
+                app:srcCompat="@drawable/proteinasimagen"
+                android:scaleType="centerCrop"
+                android:background="@drawable/background_oval" />
+
+            <!-- Título del producto -->
+            <TextView
+                android:id="@+id/productTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/product_title"
+                android:textColor="@color/azuloscuro"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:paddingTop="16dp"
+                android:textAlignment="center" />
+
+            <!-- Marca del producto -->
+            <TextView
+                android:id="@+id/productBrand"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:paddingTop="8dp"
+                android:text="@string/product_brand"
+                android:textAlignment="center"
+                android:textColor="@color/azuloscuro"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!-- Información nutricional -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:id="@+id/productCantGramos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_grams"
+                    android:textColor="@color/azuloscuro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/productKcal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_kcal"
+                    android:textColor="@color/azuloscuro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/productGrasas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_fat"
+                    android:textColor="@color/azuloscuro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/productCarbohidratos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_carbs"
+                    android:textColor="@color/azuloscuro"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/productProteinas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/product_protein"
+                    android:textColor="@color/azuloscuro"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Botón para agregar al carrito -->
+            <Button
+                android:id="@+id/addToCartButton"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:layout_marginTop="24dp"
+                android:background="@color/azuloscuro"
+                android:padding="8dp"
+                android:text="@string/add_to_cart_button"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/deleteProductButton"
+                android:layout_width="match_parent"
+                android:layout_height="71dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:text="@string/delete_product_button"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone"
+                app:cornerRadius="0dp" />
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

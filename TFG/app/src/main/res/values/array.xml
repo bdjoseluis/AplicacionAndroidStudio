@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="genero">
+        <item>Hombre</item>
+        <item>Mujer</item>
+    </array>
+
+    <array name="objetivos">
+        <item>Ganar Peso</item>
+        <item>Perder Peso</item>
+    </array>
+
+    <array name="Esquema_comidas_horarios">
+        <item>Recena, Cena, Merienda, Comida, Almuerzo, Desayuno</item>
+        <item>Cena, Merienda, Comida, Almuerzo, Desayuno</item>
+        <item>Cena, Comida, Desayuno</item>
+    </array>
+
+    <array name="idioma">
+        <item>Español, España</item>
+        <item>Ingles, Inglaterra</item>
+    </array>
+    <array name="Agua">
+        <item>Capacidad del vaso 200 ml</item>
+        <item>Mujer</item>
+    </array>
+    <array name="Fondo">
+        <item>Claro</item>
+        <item>Oscuro</item>
+    </array>
+
+    <array name="actividad_fisica">
+        <item>Sedentario</item>
+        <item>Ligeramente activo</item>
+        <item>Moderadamente activo</item>
+        <item>Muy activo</item>
+        <item>Extremadamente activo</item>
+    </array>
+</resources>

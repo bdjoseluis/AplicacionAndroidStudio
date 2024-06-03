@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="@string/profile_title">
+        <ListPreference
+            android:entries="@array/genero"
+            android:entryValues="@array/genero"
+            android:icon="@drawable/user"
+            android:key="genero"
+            android:summary="@string/genero_summary"
+            android:title="@string/genero_title" />
+        <EditTextPreference
+            android:icon="@drawable/user"
+            android:key="fecha_nacimiento"
+            android:summary="@string/fecha_nacimiento_summary"
+            android:title="@string/fecha_nacimiento_title"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:singleLine="true" />
+        <EditTextPreference
+            android:icon="@drawable/user"
+            android:inputType="number"
+            android:key="peso"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="@string/peso_summary"
+            android:title="@string/peso_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/objetivos_title">
+        <ListPreference
+            android:key="objetivos"
+            android:title="@string/objetivos_title"
+            android:entries="@array/objetivos"
+            android:summary="@string/objetivos_summary"
+            android:entryValues="@array/objetivos"
+            android:icon="@drawable/abdominales"
+            android:defaultValue="Perder Peso" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/esquemacomidashorarios_title">
+        <ListPreference
+            android:entries="@array/Esquema_comidas_horarios"
+            android:entryValues="@array/Esquema_comidas_horarios"
+            android:icon="@drawable/dieta"
+            android:key="esquemacomidashorarios"
+            android:summary="@string/esquemacomidashorarios_summary"
+            android:title="@string/esquemacomidashorarios_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/idioma_title">
+        <ListPreference
+            android:entries="@array/idioma"
+            android:entryValues="@array/idioma"
+            android:icon="@android:drawable/ic_btn_speak_now"
+            android:key="idioma"
+            android:defaultValue="Español, España"
+            android:summary="@string/idioma_summary"
+            android:title="@string/idioma_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/notifications_text">
+        <EditTextPreference
+            android:key="intervalo_notificacion"
+            android:title="@string/intervalo_notificacion_title"
+            android:summary="@string/intervalo_notificacion_summary"
+            android:inputType="number"
+            android:icon="@drawable/btn_1"
+            android:defaultValue="1440" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/acerca_de_title">
+        <PreferenceScreen
+            android:icon="@drawable/search2"
+            android:key="acerca_de"
+            android:summary="@string/acerca_de_summary"
+            android:title="@string/acerca_de_title">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.example.tfg"
+                android:targetClass="com.example.tfg.SobreNosotros"/>
+        </PreferenceScreen>
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- TextView para mostrar el nombre de la canción -->
+    <EditText
+        android:id="@+id/song_title1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Nombre de la canción"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical" />
+
+    <!-- Botón para eliminar la canción -->
+    <ImageButton
+        android:id="@+id/btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_delete"
+        android:contentDescription="Eliminar"
+        android:layout_gravity="center_vertical" />
+
+</LinearLayout>

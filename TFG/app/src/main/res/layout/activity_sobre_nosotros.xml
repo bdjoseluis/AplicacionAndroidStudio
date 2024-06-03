@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SobreNosotros"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/yo"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Jose Luis"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_below="@id/name_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Desarrollador de aplicaciones Multiplataforma"
+        android:textAlignment="center" />
+
+    <LinearLayout
+        android:id="@+id/social_media_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <!-- Botones de redes sociales -->
+        <!-- Asegúrate de añadir los iconos en la carpeta drawable -->
+        <!-- Ejemplo de botón para LinkedIn -->
+        <ImageButton
+            android:id="@+id/linkedin_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:selectableItemBackground"
+            android:src="@drawable/linkedin" />
+        <!-- Añade más botones para otras redes sociales aquí -->
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/contact_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/social_media_container"
+        android:layout_marginTop="24dp"
+        android:text="Contacto"/>
+
+</RelativeLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.camera.any" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logotipo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TFG"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".Login.ConfirmarCuenta"
+            android:exported="false" />
+        <activity
+            android:name=".Comunidad"
+            android:exported="false" />
+        <activity
+            android:name=".Rutina.GeneradorRutina"
+            android:exported="false" />
+        <activity
+            android:name=".GalleryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CalendarActivity"
+            android:exported="false" />
+        <activity
+            android:name=".UltimaActividad"
+            android:exported="false" />
+        <activity
+            android:name=".Dieta.NuevoProductoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Rutina.VerEjercicio"
+            android:exported="false" />
+        <activity
+            android:name=".Rutina.SeccionEjercicios"
+            android:exported="false" />
+        <activity
+            android:name=".Dieta.InformacionProducto"
+            android:exported="false" />
+        <activity
+            android:name=".Login.TienesCuenta"
+            android:exported="false" />
+        <activity
+            android:name=".ChatGpt"
+            android:exported="false" />
+        <activity
+            android:name=".Notificaciones.ConfiguracionNotificacionesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Adapter.MusicPlayerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Spotify"
+            android:exported="false" />
+        <activity
+            android:name=".Login.Perfil"
+            android:exported="false" />
+        <activity
+            android:name=".Dieta.VerProducto"
+            android:exported="false" />
+        <activity
+            android:name=".Dieta.SeccionProductos"
+            android:exported="false" />
+        <activity
+            android:name=".Login.DireccionUbicacionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login.NifNombreApellidosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Login.InicioSesion"
+            android:exported="false" />
+        <activity
+            android:name=".Compra.PagosActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Rutina.Ejercicios"
+            android:exported="false" />
+        <activity
+            android:name=".Compra.tufotoactivity"
+            android:exported="false" />
+        <activity
+            android:name=".Compra.carrito"
+            android:exported="false" />
+        <activity
+            android:name=".fragments.navegador"
+            android:exported="false"
+            android:label="@string/title_activity_navegador"
+            android:theme="@style/Theme.TFG.NoActionBar" />
+        <activity
+            android:name=".SobreNosotros"
+            android:exported="false" />
+        <activity
+            android:name=".Dieta.addProductos"
+            android:exported="false" />
+        <activity
+            android:name=".Compra.Compra"
+            android:exported="false" />
+        <activity
+            android:name=".Ajustes"
+            android:exported="false"
+            android:parentActivityName=".Inicio">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Inicio" />
+        </activity>
+        <activity
+            android:name=".Rutina.Rutina"
+            android:exported="false" />
+        <activity
+            android:name=".Dieta.Dieta"
+            android:exported="false" />
+        <activity
+            android:name=".Inicio"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".splash.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

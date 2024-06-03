@@ -1,0 +1,28 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_entrenamiento"
+            android:title="Entrenamiento" />
+        <item
+            android:id="@+id/menu_libros"
+            android:title="Libros" />
+        <item
+            android:id="@+id/menu_mezcladores"
+            android:title="Mezcladores y Botellas Deportivas" />
+        <item
+            android:id="@+id/menu_mochilas"
+            android:title="Mochilas y Bolsas Deportivas" />
+        <item
+            android:id="@+id/menu_otro_accesorios"
+            android:title="Otros Accesorios" />
+        <item
+            android:id="@+id/menu_pastilleros"
+            android:title="Pastilleros" />
+        <item
+            android:id="@+id/menu_ropa"
+            android:title="Ropa Deportiva" />
+        <item
+            android:id="@+id/menu_toallas"
+            android:title="Toallas Deportivas" />
+    </group>
+</menu>

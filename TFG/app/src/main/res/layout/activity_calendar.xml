@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- CalendarView para mostrar el calendario -->
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!-- TextView para mostrar la fecha seleccionada -->
+    <TextView
+        android:id="@+id/textViewSelectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calendarView"
+        android:layout_marginTop="16dp"
+        android:text="Fecha seleccionada: "
+        android:textSize="18sp" />
+
+    <!-- ListView para mostrar los eventos de la fecha seleccionada -->
+    <ListView
+        android:id="@+id/listViewEvents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewSelectedDate"
+        android:layout_marginTop="16dp" />
+
+    <!-- Botón para agregar eventos -->
+    <Button
+        android:id="@+id/buttonAddEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listViewEvents"
+        android:layout_marginTop="16dp"
+        android:text="Agregar evento" />
+
+    <!-- Botón para eliminar eventos -->
+    <Button
+        android:id="@+id/buttonRemoveEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/buttonAddEvent"
+        android:layout_below="@id/listViewEvents"
+        android:layout_marginTop="16dp"
+        android:text="Eliminar evento" />
+</RelativeLayout>

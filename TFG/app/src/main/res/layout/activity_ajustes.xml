@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ajustes"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/botonInicio"
+        android:elevation="8dp">
+
+        <ImageButton
+            android:id="@+id/volverajustes"
+            android:layout_width="67dp"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:onClick="onClick"
+            android:src="@drawable/back" />
+
+        <ImageButton
+            android:id="@+id/botonayuda"
+            android:layout_width="59dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="0dp"
+            android:background="@color/white"
+            android:src="@drawable/bottom_btn4" />
+
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contenedorajustes"
+        >
+
+    </FrameLayout>
+
+</LinearLayout>

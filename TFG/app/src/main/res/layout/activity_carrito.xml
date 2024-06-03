@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".Compra.carrito">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/titulocarritoactivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hammersmith_one"
+        android:text="@string/title_carrito_activity"
+        android:textColor="#FFA500"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+    <!-- Lista de productos -->
+    <ListView
+        android:id="@+id/listacarrito"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/titulocarritoactivity"
+        app:layout_constraintBottom_toTopOf="@id/textViewTotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- TextView para mostrar el total -->
+    <TextView
+        android:id="@+id/textViewTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_margin="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/botonPagar"
+        app:layout_constraintHorizontal_bias="0.5"
+        android:text="@string/total_label"  /> <!-- Texto inicial del total -->
+
+    <!-- Botón de pago -->
+    <Button
+        android:id="@+id/botonPagar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/pay_button"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/background_rounded"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

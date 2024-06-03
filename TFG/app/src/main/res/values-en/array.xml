@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="genero">
+        <item>Male</item>
+        <item>Female</item>
+    </array>
+
+    <array name="objetivos">
+        <item>Gain Weight</item>
+        <item>Lose Weight</item>
+    </array>
+
+    <array name="Esquema_comidas_horarios">
+        <item>Late Snack, Dinner, Snack, Lunch, Brunch, Breakfast</item>
+        <item>Dinner, Snack, Lunch, Brunch, Breakfast</item>
+        <item>Dinner, Lunch, Breakfast</item>
+    </array>
+
+    <array name="idioma">
+        <item>Spanish, Spain</item>
+        <item>English, England</item>
+    </array>
+    <array name="Agua">
+        <item>Glass Capacity 200 ml</item>
+        <item>Female</item>
+    </array>
+    <array name="Fondo">
+        <item>Light</item>
+        <item>Dark</item>
+    </array>
+</resources>

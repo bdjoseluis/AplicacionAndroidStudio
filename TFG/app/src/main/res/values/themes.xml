@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.TFG" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/botonInicio</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay</item>
+    </style>
+
+    <style name="Theme.TFG" parent="Base.Theme.TFG" />
+    <style name="Theme.TFG.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.TFG.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.TFG.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

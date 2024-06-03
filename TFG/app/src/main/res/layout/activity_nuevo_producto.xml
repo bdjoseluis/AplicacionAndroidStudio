@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dieta.NuevoProductoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+        <nl.dionsegijn.konfetti.KonfettiView
+            android:id="@+id/viewKonfetti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/botonGuardarProducto"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <!-- Título -->
+        <TextView
+            android:id="@+id/labelTitulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/title"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingBottom="16dp" />
+
+        <!-- Campo de entrada para el título -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputTituloLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            app:hintTextColor="@android:color/black"
+            app:boxStrokeColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/labelTitulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_title"
+                android:textColor="@android:color/black"
+                android:padding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo de entrada para la marca -->
+        <TextView
+            android:id="@+id/labelMarca"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/brand"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/inputTituloLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputMarcaLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            app:hintTextColor="@android:color/black"
+            app:boxStrokeColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/labelMarca"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputMarca"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_brand"
+                android:textColor="@android:color/black"
+                android:padding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo de entrada para cantidad de gramos -->
+        <TextView
+            android:id="@+id/labelCantGramos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/grams_quantity"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/inputMarcaLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputCantGramosLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            app:hintTextColor="@android:color/black"
+            app:boxStrokeColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/labelCantGramos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputCantGramos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_grams_quantity"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/black"
+                android:padding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo de entrada para calorías -->
+        <TextView
+            android:id="@+id/labelKcal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/calories"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/inputCantGramosLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputKcalLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            app:hintTextColor="@android:color/black"
+            app:boxStrokeColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/labelKcal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputKcal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_calories"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/black"
+                android:padding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo de entrada para grasas -->
+        <TextView
+            android:id="@+id/labelGrasas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fats"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/inputKcalLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputGrasasLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            app:hintTextColor="@android:color/black"
+            app:boxStrokeColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/labelGrasas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputGrasas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_fats"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/black"
+                android:padding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo de entrada para carbohidratos -->
+        <TextView
+            android:id="@+id/labelCarbohidratos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/carbohydrates"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/inputGrasasLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputCarbohidratosLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            app:hintTextColor="@android:color/black"
+            app:boxStrokeColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/labelCarbohidratos"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputCarbohidratos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_carbohydrates"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/black"
+                android:padding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo de entrada para proteínas -->
+        <TextView
+            android:id="@+id/labelProteinas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/proteins"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/inputCarbohidratosLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputProteinasLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            app:hintTextColor="@android:color/black"
+            app:boxStrokeColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/labelProteinas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputProteinas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_proteins"
+                android:inputType="numberDecimal"
+                android:textColor="@android:color/black"
+                android:padding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campo de entrada para la URL de la imagen -->
+        <TextView
+            android:id="@+id/labelUrlImagen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/image_url"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:paddingBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/inputProteinasLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputUrlImagenLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:boxBackgroundMode="outline"
+            app:hintTextColor="@android:color/black"
+            app:boxStrokeColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/labelUrlImagen"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputUrlImagen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_image_url"
+                android:inputType="textUri"
+                android:textColor="@android:color/black"
+                android:padding="12dp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Botón para guardar el nuevo producto -->
+        <Button
+            android:id="@+id/botonGuardarProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/botonInicio"
+            android:textColor="@android:color/white"
+            android:padding="12dp"
+            android:text="@string/save_product"
+            app:layout_constraintTop_toBottomOf="@+id/inputUrlImagenLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

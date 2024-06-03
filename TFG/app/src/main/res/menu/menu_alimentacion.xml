@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_aceites"
+            android:title="Aceites" />
+        <item
+            android:id="@+id/menu_cafes"
+            android:title="Cafés" />
+        <item
+            android:id="@+id/menu_cereales"
+            android:title="Cereales y semillas" />
+        <item
+            android:id="@+id/menu_edulcorantes"
+            android:title="Edulcorantes" />
+        <item
+            android:id="@+id/menu_espesantes"
+            android:title="Espesantes" />
+        <item
+            android:id="@+id/menu_harinas"
+            android:title="Harinas" />
+        <item
+            android:id="@+id/menu_mantequillas"
+            android:title="Mantequillas y cremas" />
+    </group>
+</menu>

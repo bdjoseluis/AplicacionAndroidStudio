@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:id="@+id/textViewNombre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="Nombre del Producto"
+        android:textAlignment="viewStart"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewProducto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Nombre del Producto" />
+
+    <TextView
+        android:id="@+id/textViewMarca"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="12dp"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="Marca"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewCantGramos"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewProducto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNombre"
+        tools:text="Marca" />
+
+    <TextView
+        android:id="@+id/textViewCantGramos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:text="Cantidad Gramos"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.54" />
+
+    <TextView
+        android:id="@+id/textViewKcal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Kcal"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.831"
+        tools:text="Kcal" />
+
+    <TextView
+        android:id="@+id/textViewGrasas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Grasas"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewProducto"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.831"
+        tools:text="Grasas" />
+
+    <TextView
+        android:id="@+id/textViewCarbohidratos"
+        android:layout_width="93dp"
+        android:layout_height="24dp"
+        android:text="Carbohidratos"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewProducto"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.566"
+        tools:text="Carbohidratos" />
+
+    <TextView
+        android:id="@+id/textViewProteinas"
+        android:layout_width="68dp"
+        android:layout_height="25dp"
+        android:layout_marginBottom="6dp"
+        android:text="Proteínas"
+        android:textAlignment="viewStart"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewProducto"
+        app:layout_constraintHorizontal_bias="0.962"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.888"
+        tools:text="Proteínas" />
+
+    <ImageView
+        android:id="@+id/imageViewProducto"
+        android:layout_width="46dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/comida_1" />
+
+    <Button
+        android:id="@+id/btnProducto"
+        android:layout_width="57dp"
+        android:layout_height="74dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="?android:attr/colorBackground"
+        app:iconSize="40dp"
+        app:iconTint="#0022FF"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewProducto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageViewProducto"
+        app:layout_constraintVertical_bias="0.562" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

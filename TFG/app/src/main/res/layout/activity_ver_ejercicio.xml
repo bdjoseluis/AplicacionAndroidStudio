@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Rutina.VerEjercicio">
+
+    <!-- Título de la actividad -->
+    <TextView
+        android:id="@+id/textViewTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_exercises"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+
+    <!-- RecyclerView para mostrar la lista de ejercicios -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEjerciciosArriba"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+    <!-- RecyclerView para mostrar la lista de ejercicios adicionales -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEjerciciosAbajo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp" />
+
+
+    <!-- Botón para agregar un nuevo ejercicio (opcional) -->
+    <Button
+        android:id="@+id/btnAgregarEjercicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_add_exercise"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone" /> <!-- Oculto por defecto -->
+
+</LinearLayout>

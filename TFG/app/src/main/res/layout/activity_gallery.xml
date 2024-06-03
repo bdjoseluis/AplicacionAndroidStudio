@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GalleryActivity">
+
+    <!-- Botón para seleccionar imágenes de la galería -->
+    <Button
+        android:id="@+id/buttonSelectImages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seleccionar imágenes"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <!-- GridView para mostrar imágenes seleccionadas -->
+    <GridView
+        android:id="@+id/gridViewImages"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonSelectImages"
+        android:layout_marginTop="16dp"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        android:columnWidth="100dp"
+        android:verticalSpacing="16dp"
+        android:horizontalSpacing="16dp" />
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imagenRutina"
+        android:layout_width="140dp"
+        android:layout_height="106dp"
+        android:src="@drawable/dia" />
+
+    <TextView
+        android:id="@+id/nombreRutina"
+        android:layout_width="301dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center_vertical"
+        android:text="@string/default_rutina_name"
+        android:textSize="18sp" />
+
+</LinearLayout>

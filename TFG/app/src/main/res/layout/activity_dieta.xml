@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ADD8E6"
+    tools:context=".Dieta.Dieta">
+    <View
+        android:id="@+id/backgroundView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:alpha="1.0"
+        android:visibility="gone"
+        android:elevation="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1E7DC8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewdecomprables"
+                    android:layout_width="411dp"
+                    android:layout_height="94dp"
+                    android:background="#ADD8E6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutValoresNutricionales"
+        android:layout_width="413dp"
+        android:layout_height="75dp"
+        android:background="@drawable/rounded_background"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollview">
+
+        <!-- TextView para mostrar el valor de kcal -->
+        <TextView
+            android:id="@+id/textViewKcal"
+            android:layout_width="29dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Kcal: 0"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!-- TextView para mostrar el valor de proteínas -->
+        <TextView
+            android:id="@+id/textViewProteinas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="P: 0"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!-- TextView para mostrar el valor de grasas -->
+        <TextView
+            android:id="@+id/textViewGrasas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="G: 0"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!-- TextView para mostrar el valor de carbohidratos -->
+        <TextView
+            android:id="@+id/textViewCarbohidratos"
+            android:layout_width="7dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="-5dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="CBH: 0"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/comidasDiasSemana"
+        android:layout_width="407dp"
+        android:layout_height="412dp"
+        android:background="#ADD8E6"
+        app:layout_constraintBottom_toTopOf="@+id/coordinatorLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollview" />
+
+    <LinearLayout
+        android:id="@+id/layoutProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_background"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/comidasDiasSemana">
+
+        <!-- TextView que muestra el valor 0 -->
+        <TextView
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="-3dp"
+            android:paddingLeft="1dp"
+            android:paddingTop="-2dp"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!-- ProgressBar -->
+        <ProgressBar
+            android:id="@+id/progressBarValoresNutricionales"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:max="3000"
+            android:progress="1000"
+            android:progressDrawable="@drawable/progress_drawable" />
+
+        <!-- TextView que muestra el valor 3000 -->
+        <TextView
+            android:id="@+id/textViewMaxKcal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="3000"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layoutPrincipal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/comidasDiasSemana"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <!-- Agrega aquí otros elementos si es necesario -->
+    </LinearLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:backgroundTint="#f6f6f6"
+            app:fabCradleMargin="8dp"
+            app:fabCradleRoundedCornerRadius="58dp"
+            app:fabCradleVerticalOffset="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/botoninicio"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/iconocasa" />
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/home"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/botondieta"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/dieta" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/diet"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/botonrutina"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    tools:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/imageView20"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/iconogym"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/textView25"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/routine"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/botontienda"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView234"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/carrito" />
+
+                    <TextView
+                        android:id="@+id/textView355"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/store"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/botonajustes"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="69dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/btn4" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings"
+                        android:textAlignment="center"
+                        android:textColor="#676767"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <ImageView
+        android:id="@+id/cloudImageView"
+        android:layout_width="610dp"
+        android:layout_height="510dp"
+        android:layout_marginTop="130dp"
+        android:elevation="17dp"
+        android:layout_marginLeft="-110dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:src="@drawable/dialogo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewFirstTime"
+        android:layout_width="283dp"
+        android:layout_height="160dp"
+        android:background="@drawable/dialog_cloud_background"
+        android:elevation="17dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="Este es el apartado de Dieta donde podras personalizar tus comidas diarias"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/layoutProgressBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollview" />
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/toast_animationdieta"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="150dp"
+        android:layout_marginLeft="-200dp"
+        android:elevation="18dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/backgroundView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation1715270027160" />
+</androidx.constraintlayout.widget.ConstraintLayout>

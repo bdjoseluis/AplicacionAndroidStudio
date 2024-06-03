@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Custom text appearance style -->
+    <style name="CustomTextAppearance" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+    </style>
+
+    <!-- Spinner style -->
+    <style name="SpinnerStyle">
+        <!-- Add properties here to customize the Spinner as desired -->
+    </style>
+
+    <!-- Gender options array (should be outside of styles) -->
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>

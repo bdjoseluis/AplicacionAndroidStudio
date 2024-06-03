@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dieta.addProductos">
+
+
+
+    <!-- Layout con fondo de color para el día de la semana -->
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="425dp"
+        android:layout_height="203dp"
+        android:scaleType="centerCrop"
+        app:circularflow_defaultRadius="@dimen/fab_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arc_2"
+        app:tint="#41BDFF" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/day_layout"
+        android:layout_width="413dp"
+        android:layout_height="84dp"
+        android:background="#41BDFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- TextView para mostrar el día de la semana seleccionado -->
+
+        <TextView
+            android:id="@+id/comidaseleccionada"
+            android:layout_width="412dp"
+            android:layout_height="75dp"
+            android:text="@string/comidaseleccionada"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- TextView para mostrar el día de la semana debajo de la comida -->
+        <TextView
+            android:id="@+id/diadelasemanaseleccionado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/diadelasemanaseleccionado"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- EditText para permitir búsquedas -->
+
+
+    <EditText
+
+        android:id="@+id/search_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edittext_background"
+        android:backgroundTint="#41BDFF"
+        android:drawableStart="@drawable/search2"
+        android:drawableEnd="@drawable/microphone"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="Buscar productos..."
+        android:inputType="text"
+        android:padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day_layout" />
+
+    <!-- TextView para mostrar "Comidas del día" encima de la lista de productos -->
+
+    <!-- RecyclerView para mostrar la lista de productos -->
+    <TextView
+        android:id="@+id/comidas_del_dia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="124dp"
+        android:text="@string/comidas_del_dia"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day_layout" />
+
+    <!-- Botón para agregar productos a la lista -->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/productosdecomida"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/añadirProductosalalista"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_edit_text"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/añadirProductosalalista"
+        android:layout_width="199dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/gris"
+        android:text="@string/añadir_productos"
+        android:textColor="#000000"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/plus"
+        app:iconSize="24dp"
+        app:iconTint="#41BDFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/boton_nuevo_producto"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Botón para agregar un nuevo producto -->
+    <Button
+        android:id="@+id/boton_nuevo_producto"
+        android:layout_width="199dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/gris"
+        android:drawableStart="@drawable/microphone"
+        android:drawablePadding="8dp"
+        android:ems="10"
+        android:text="@string/nuevo_producto"
+        android:textColor="#000000"
+        app:cornerRadius="0dp"
+        app:icon="@drawable/plus"
+        app:iconSize="24dp"
+        app:iconTint="#41BDFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/añadirProductosalalista" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

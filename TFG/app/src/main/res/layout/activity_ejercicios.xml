@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".Rutina.Ejercicios">
+
+    <!-- Layout con fondo de color para el día de la semana -->
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:rotation="180"
+        android:scaleType="centerCrop"
+        app:circularflow_defaultRadius="@dimen/fab_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day_layout"
+        app:srcCompat="@drawable/arc_3"
+        app:tint="#FFFFFF" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/day_layout"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- TextView para mostrar el día de la semana seleccionado -->
+
+
+        <TextView
+            android:id="@+id/diadelasemanaseleccionado"
+            android:layout_width="417dp"
+            android:layout_height="46dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/monday"
+            android:textAlignment="center"
+            android:textColor="#FF0000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- EditText para permitir búsquedas -->
+
+    <!-- ListView para mostrar ejercicios de la semana -->
+
+    <EditText
+        android:id="@+id/search_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/edittext_background"
+        android:backgroundTint="#FFFFFF"
+        android:drawableStart="@drawable/search"
+        android:drawableEnd="@drawable/microphone"
+        android:drawablePadding="16dp"
+        android:ems="10"
+        android:hint="@string/search_exercises_hint"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <ListView
+        android:id="@+id/lista_ejercicios_semana"
+        android:layout_width="407dp"
+        android:layout_height="381dp"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/agregar_ejercicio_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+    <!-- FrameLayout para contener la animación de carga -->
+    <FrameLayout
+        android:id="@+id/loading_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/lista_ejercicios_semana"
+        app:layout_constraintTop_toTopOf="@id/lista_ejercicios_semana">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation1715270027160" />
+
+        <!-- Ajustar el TextView para que esté debajo del lottie_view -->
+    </FrameLayout>
+
+
+
+    <!-- Botón para agregar un nuevo ejercicio -->
+    <Button
+        android:id="@+id/agregar_ejercicio_btn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="@string/add_exercise"
+        android:textColor="#FF0000"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/ejercicios_semana"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/week_exercises"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/lista_ejercicios_semana"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.823" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
